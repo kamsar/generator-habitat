@@ -15,6 +15,8 @@ module.exports = yeoman.Base.extend({
     ));
 
     console.log('Before generating Habitat, make sure to install a copy of Sitecore using SIM, with WFFM.')
+    console.log('');
+    console.log(chalk.red('YOU MUST RUN THIS GENERATOR AS AN ADMINISTRATOR.'));
 
     var prompts = [{
       type: 'input',
