@@ -29,13 +29,13 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    this.fs.copy(
+    /*this.fs.copy(
       this.templatePath('dummyfile.txt'),
       this.destinationPath('dummyfile.txt')
-    );
+    );*/
   },
 
   install: function () {
-    this.installDependencies();
+    console.log('The Habitat generator is not yet operational. Try the feature subgenerator with ' + chalk.red('yo habitat:feature'))
   }
 });
