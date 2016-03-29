@@ -1,5 +1,5 @@
 # generator-habitat [![NPM version][npm-image]][npm-url]
-> Yeoman generator for Sitecore Habitat
+> Yeoman generator for [Sitecore Habitat](https://github.com/Sitecore/Habitat)
 
 ## Installation
 
@@ -10,17 +10,26 @@ npm install -g yo
 npm install -g generator-habitat
 ```
 
-Then cd to where you want to install Habitat and generate your new Habitat project:
+## Installing Habitat
+
+Prerequisite: Install a Sitecore instance with SIM. Use the version Habitat currently supports. You may use any hostname and path.
+
+Then cd to where you want to install Habitat (make a new folder for your repository) and generate your new Habitat project:
 
 ```bash
+cd path\to\myNewHabitat
 yo habitat
 ```
+... then follow the prompts.
 
-Feature Generator (execute in the root of your existing Habitat installation):
+## Adding Features to Habitat
+
+Execute in the root of your existing Habitat installation:
 
 ```bash
 yo habitat:feature
 ```
+...then follow the prompts.
 
 ## License
 
