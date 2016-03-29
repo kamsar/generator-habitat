@@ -1,4 +1,4 @@
-# generator-habitat [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-habitat [![NPM version][npm-image]][npm-url]
 > Yeoman generator for Sitecore Habitat
 
 ## Installation
@@ -10,27 +10,22 @@ npm install -g yo
 npm install -g generator-habitat
 ```
 
-Then generate your new project:
+Then cd to where you want to install Habitat and generate your new Habitat project:
 
 ```bash
 yo habitat
 ```
 
-## Getting To Know Yeoman
+Feature Generator (execute in the root of your existing Habitat installation):
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+```bash
+yo habitat:feature
+```
 
 ## License
 
-Apache-2.0 © [Sitecore]()
+Apache-2.0
 
 
 [npm-image]: https://badge.fury.io/js/generator-habitat.svg
 [npm-url]: https://npmjs.org/package/generator-habitat
-[travis-image]: https://travis-ci.org/Sitecore/generator-habitat.svg?branch=master
-[travis-url]: https://travis-ci.org/Sitecore/generator-habitat
-[daviddm-image]: https://david-dm.org/Sitecore/generator-habitat.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Sitecore/generator-habitat
