@@ -76,6 +76,11 @@ module.exports = yeoman.Base.extend({
     /*********** TESTS ***************/
 
     if(this.props.createTests) {
+      this.fs.copy(
+        this.templatePath('tests/**/*'),
+        this.destinationPath(path.join(targetPath, 'tests'))
+      );
+
       // tests csproj
       this.fs.copyTpl(
         this.templatePath('Sitecore.Feature.Tests.csproj'),
@@ -108,7 +113,9 @@ module.exports = yeoman.Base.extend({
     );
   },
 
-  install: function () {
-    // sln?
+  end: function() {
+    console.log('');
+    console.log('Your feature ' + chalk.red(this.props.featureTitle) + ' has been created');
+    console.log('You will need to add your feature project(s) to your Visual Studio solution.');
   }
 });
