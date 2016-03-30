@@ -31,6 +31,8 @@ module.exports = yeoman.Base.extend({
       this.props = props;
       this.props.projectGuid = '{' + guid.v4() + '}';
       this.props.testProjectGuid = '{' + guid.v4() + '}';
+      this.props.templateItemGuid = guid.v4();
+      this.props.renderingItemGuid = guid.v4();
 
       done();
     }.bind(this));
@@ -116,6 +118,9 @@ module.exports = yeoman.Base.extend({
   end: function() {
     console.log('');
     console.log('Your feature ' + chalk.red(this.props.featureTitle) + ' has been created');
+    console.log('');
     console.log('You will need to add your feature project(s) to your Visual Studio solution.');
+    console.log('Then build and publish the feature project from Visual Studio.');
+    console.log('Finally use /unicorn.aspx and sync the Feature.' + this.props.featureTitle + ' configuration to create the template and rendering root items.');
   }
 });
