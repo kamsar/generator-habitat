@@ -12,15 +12,22 @@ npm install -g generator-habitat
 
 ## Installing Habitat
 
-Prerequisite: Install a Sitecore instance with SIM. Use the version Habitat currently supports. You may use any hostname and path. You also need Git.
+Prerequisites: 
+* Install a Sitecore instance with SIM. Use the version Habitat currently supports. You may use any hostname and path. 
+* Install WFFM on your Sitecore instance.
+* You need a copy of Git installed.
 
-Then cd to where you want to install Habitat (make a new folder for your repository) and generate your new Habitat project from an **administrative** command prompt:
+Then:
+* Open an *ADMINISTRATIVE* command prompt (or PowerShell)
+* `cd` to where you want to install Habitat (make a new folder for your repository):
 
 ```bash
 cd path\to\myNewHabitat
 yo habitat
 ```
 ... then follow the prompts.
+
+When you're done, you'll have a fully functioning Habitat installation.
 
 ## Adding Features to Habitat
 
