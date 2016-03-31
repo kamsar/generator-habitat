@@ -31,6 +31,15 @@ yo habitat:feature
 ```
 ...then follow the prompts.
 
+## Adding Foundation Modules to Habitat
+
+Execute in the root of your existing Habitat installation:
+
+```bash
+yo habitat:foundation
+```
+...then follow the prompts.
+
 ## License
 
 Apache-2.0

@@ -122,5 +122,6 @@ module.exports = yeoman.Base.extend({
     console.log('You will need to add your feature project(s) to your Visual Studio solution.');
     console.log('Then build and publish the feature project from Visual Studio.');
     console.log('Finally use /unicorn.aspx and sync the Feature.' + this.props.featureTitle + ' configuration to create the template and rendering root items.');
+    console.log('Or run the Habitat Sync-Unicorn Gulp task.')
   }
 });
