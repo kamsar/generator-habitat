@@ -25,10 +25,23 @@ module.exports = yeoman.Base.extend({
       name: 'createTests',
       message: 'Create unit test project (DO IT!):',
       default: true
+    },
+    {
+      type: 'confirm',
+      name: 'transparentSync',
+      message: 'Use Unicorn transparent sync:',
+      default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
+      
+      if(props.transparentSync) {
+        props.transparentSync = '<dataProviderConfiguration type="Unicorn.Data.DataProvider.DefaultUnicornDataProviderConfiguration, Unicorn" enableTransparentSync="true" />';
+      } else {
+        props.transparentSync = '';
+      }
+
       this.props.projectGuid = '{' + guid.v4() + '}';
       this.props.testProjectGuid = '{' + guid.v4() + '}';
       this.props.templateItemGuid = guid.v4();
