@@ -22,13 +22,13 @@ module.exports = yeoman.Base.extend({
       type: 'input',
       name: 'sitecoreFolder',
       message: 'Where is your Sitecore webroot for Habitat to use: ',
-      default: 'C:\\websites\\habitat.local\\Website'
+      default: 'C:\\websites\\habitat.dev.local\\Website'
     },
     {
       type: 'input',
       name: 'hostName',
       message: 'What is the URL for this site: ',
-      default: 'http://habitat.local'
+      default: 'http://habitat.dev.local'
     }];
 
     this.prompt(prompts, function (props) {
@@ -57,7 +57,7 @@ module.exports = yeoman.Base.extend({
           parentThis.destinationPath('gulp-config.js'),
           {
             process: function(content) {
-              return content.toString().replace(/C:\\\\websites\\\\Habitat\.local\\\\Website/gi, parentThis.props.sitecoreFolder.replace(/\\/g, '\\\\'));
+              return content.toString().replace(/C:\\\\websites\\\\Habitat\.dev\.local\\\\Website/gi, parentThis.props.sitecoreFolder.replace(/\\/g, '\\\\'));
             }
           }
         );
@@ -79,7 +79,7 @@ module.exports = yeoman.Base.extend({
           parentThis.destinationPath('publishsettings.targets'),
           {
             process: function(content) {
-              return content.toString().replace(/http:\/\/habitat\.local/gi, parentThis.props.hostName);
+              return content.toString().replace(/http:\/\/habitat\.dev\.local/gi, parentThis.props.hostName);
             }
           }
         );
